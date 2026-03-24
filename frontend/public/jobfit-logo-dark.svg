@@ -1,0 +1,25 @@
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Dark background -->
+  <rect width="200" height="200" rx="24" fill="#0f0f14"/>
+
+  <!-- Outer arc track -->
+  <path d="M50 140 A65 65 0 0 1 150 140" fill="none" stroke="rgba(255,255,255,0.08)" stroke-width="10" stroke-linecap="round"/>
+  <!-- Colored arc (85% fill) -->
+  <path d="M50 140 A65 65 0 0 1 144 112" fill="none" stroke="#7C3AED" stroke-width="10" stroke-linecap="round"/>
+  <!-- Bright tip -->
+  <path d="M141 115 A65 65 0 0 1 144 112" fill="none" stroke="#A78BFA" stroke-width="10" stroke-linecap="round"/>
+
+  <!-- Score number -->
+  <text x="100" y="126" text-anchor="middle" font-family="Georgia,serif" font-size="28" font-weight="700" fill="#ffffff">94</text>
+  <text x="100" y="142" text-anchor="middle" font-family="Arial,sans-serif" font-size="8" fill="rgba(255,255,255,0.35)" letter-spacing="2">MATCH</text>
+
+  <!-- JF badge -->
+  <rect x="76" y="52" width="48" height="34" rx="10" fill="#7C3AED"/>
+  <rect x="76" y="52" width="48" height="16" rx="10" fill="rgba(255,255,255,0.12)"/>
+  <rect x="76" y="62" width="48" height="6" fill="rgba(255,255,255,0.12)"/>
+  <text x="100" y="74" text-anchor="middle" font-family="Georgia,serif" font-size="15" font-weight="700" fill="#ffffff">JF</text>
+
+  <!-- Wordmark -->
+  <text x="100" y="175" text-anchor="middle" font-family="Georgia,serif" font-size="22" font-weight="700" fill="#ffffff" letter-spacing="-0.5">Job</text>
+  <text x="136" y="175" text-anchor="middle" font-family="Georgia,serif" font-size="22" font-weight="400" fill="#7C3AED" font-style="italic">Fit</text>
+</svg>
