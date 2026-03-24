@@ -2,7 +2,7 @@
 
 const Loading = () => {
   return (
-   <main className="flex items-center justify-center min-h-screen bg-[#06060a]">
+   <main className="flex items-center justify-center min-h-screen">
   <div className="flex flex-col items-center gap-6">
 
     {/* Animated arc logo */}

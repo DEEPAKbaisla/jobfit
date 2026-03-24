@@ -334,19 +334,20 @@ const LandingPage = () => {
 
       {/* ── MARQUEE ── */}
       <div className="relative z-10 border-y border-white/[0.05] py-4 overflow-hidden mb-24" style={{ background: "rgba(255,255,255,0.015)" }}>
+        
         <div className="marquee-track">
-          {[...Array(2)].flatMap(() =>
-            marqueeItems.map((item, i) => (
-              <span
-                key={`${item}-${i}`}
-                className="text-white/18 text-[12px] font-bold uppercase tracking-[2px] whitespace-nowrap flex-shrink-0 flex items-center gap-6"
-              >
-                {item}
-                <span className="text-violet-600 text-base">✦</span>
-              </span>
-            ))
-          )}
-        </div>
+  {[...Array(2)].flatMap((_, outerIndex) =>
+    marqueeItems.map((item, i) => (
+      <span
+        key={`${item}-${outerIndex}-${i}`}
+        className="text-white/18 text-[12px] font-bold uppercase tracking-[2px] whitespace-nowrap flex-shrink-0 flex items-center gap-6"
+      >
+        {item}
+        <span className="text-violet-600 text-base">✦</span>
+      </span>
+    ))
+  )}
+</div>
       </div>
 
       {/* ── FEATURES ── */}

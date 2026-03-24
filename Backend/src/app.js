@@ -6,15 +6,28 @@ import cors from "cors";
 import helmet from "helmet";
 import compression from "compression";
 import rateLimit from "express-rate-limit";
+import connectDB from "./config/database.js";
 
 const app = express();
+
+// ✅ Ensure DB is connected before processing any request (serverless support)
+app.use(async (req, res, next) => {
+  try {
+    await connectDB();
+    next();
+  } catch (error) {
+    console.error("Database connection failed:", error);
+    res.status(500).json({ message: "Database connection failed" });
+  }
+});
 // ✅ Security headers
 app.use(helmet());
 // ✅ Gzip compression
 app.use(compression());
 
-const allowedOrigins = process.env.FRONTEND_URL?.split(",") || [
+const allowedOrigins = [
   "http://localhost:5173",
+  "https://jobfit-nu.vercel.app"
 ];
 app.use(
   cors({
