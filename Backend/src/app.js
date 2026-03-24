@@ -62,7 +62,9 @@ app.get("/api/health", (req, res) => {
 });
 
 /*   using all routes  */
-
+app.get("/", (req,res) => {
+ res.send("Backend is working successfully");
+});
 app.use("/api/auth", authRouter);
 app.use("/api/interview", interviewRouter);
 
